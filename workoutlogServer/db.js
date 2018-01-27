@@ -1,17 +1,19 @@
-let Sequelize = require('sequelize');
-
-let sequelize = new Sequelize('workoutlog', 'postgres', 'SeaBass44', {
-    host: 'localhost',
-    dialect: 'postgres'
+var Sequelize = require('sequelize');
+var sequelize = new Sequelize('workoutlog', 'postgres', 'SeaBass44', {
+	host: 'localhost',
+	dialect: 'postgres'
 });
 
 sequelize.authenticate().then(
-    function() {
-        console.log('connected to workoutlog postgres db')
-    },
-    function(err){
-        console.log(err)
-    }
+	function() {
+		console.log('connected to workoutlog postgres db');
+	},
+	function(err){
+		console.log(err);
+	}
 );
-let User = sequelize.import('./models/user.js');
+
+
+var User = sequelize.import('./models/user');
+
 module.exports = sequelize;

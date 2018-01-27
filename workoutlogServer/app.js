@@ -1,43 +1,19 @@
-let express=require('express');
-let app=express();
-let bodyParser = require('body-parser');
-let sequelize = require('./db.js');
-let User = sequelize.import('./models/user.js')
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+var sequelize = require('./db');
 
-User.sync();
-// =====Danger will Robsinson will force delete user table
-// User.sync({force:true})
-//=======
+var User = sequelize.import(__dirname + '\\models\\user');
+//Create table
+User.sync(); // sync( {force: true}), to drop then create each time the app starts!
 
+app.use(bodyParser.json());
 app.use(require('./middleware/headers'));
-
+app.use('/api/user', require('./routes/user'));
 app.use('/api/test', function(req, res){
-    res.send("Hello World!")
+	res.send("Hello World");
 });
+
 app.listen(3000, function(){
-    console.log("app is open on 3000!");
-});
-
-
-//build a user model in sqllize
-
-
-app.use(bodyParser());
-
-app.post('/api/user', function(req, res) {
-    let username = req.body.user.username;
-    let pass = req.body.user.password;
-    User.create({
-        username: username,
-        passwordhash: ""
-    }).then(
-        //Sequelize is going to return the object it created from db.
-        function createSuccess(user){
-            //successful get this;
-            res.json({
-                user: user,
-                message: 'create'
-            });
-        },
-    );
+	console.log('App is listening on 3000.')
 });
