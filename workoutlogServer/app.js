@@ -34,6 +34,9 @@ let User = sequelize.define('user', {
     passwordhash: Sequelize.STRING,
 });
 User.sync();
+// =====Danger will Robsinson will force delete user table
+// User.sync({force:true})
+//=======
 app.use(bodyParser());
 
 app.post('/api/user', function(req, res) {
