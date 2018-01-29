@@ -20,11 +20,21 @@ $(function(){
                 contentType: "application/json"
             });
             //sign up fail/done
+            signup.done(function(data){
+                if(data.sessionToken){
+                    WorkoutLog.setAuthHeader(data.sessionToken);
+                }
+                $("#signup-modal").modal("hide");
+                $("#.disabled").removeClass("disabled");
+                $("#loginout").text("Logout");
+            }).fail(function(){
+                $("su_error").text("There was an issue with sign up").show();
+            });
         }
 
         //login method
 
         //loginoutmethod
     });
-    //bind events
+    $("#signup").on("click", WorkoutLog.signup);
 });
