@@ -1,5 +1,4 @@
 $(function(){
-
     var WorkoutLog = (function($, undefined) {
           var API_BASE =  "http://localhost:3000/api/";
           var userDefinitions = [];
@@ -24,7 +23,7 @@ $(function(){
        })(jQuery);
     
        // Ensure .disabled aren't clickable
-       $(".nav-tabs a[data-toggle=tab]").on("click", function(e) {
+       $('.nav-tabs a[data-toggle="tab"]').on("click", function(e) {
           var token = window.localStorage.getItem("sessionToken");
           if ($(this).hasClass("disabled") && !token) {
              e.preventDefault();
@@ -32,7 +31,7 @@ $(function(){
           }
        });
     
-       // bind tab change events
+       //bind tab change events
        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
           var target = $(e.target).attr("href"); // activated tab
           if (target === "#log") {
@@ -63,6 +62,5 @@ $(function(){
     
        // expose this to the other workoutlog modules
        window.WorkoutLog = WorkoutLog;
-    
-    
     });
+    
