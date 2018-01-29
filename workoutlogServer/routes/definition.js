@@ -12,7 +12,7 @@ router.post('/', function(req, res) {
     //methods
     Definition
             .create({
-                description: descripton,
+                description: description,
                 logType: logType,
                 owner: owner
 
