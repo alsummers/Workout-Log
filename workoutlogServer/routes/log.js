@@ -8,26 +8,24 @@ router.post('/', function(req, res) {
     // req has some body properties that have a username and pwd
     var description = req.body.log.description; 
     var result = req.body.log.result; 
-    var user = req.user;
+	var user = req.body.user;
+	var userid = req.body.user.id;
     var definition = req.body.log.def;
-   
-
-    // Use our sequelize model to create log
-  	Log 
-	    .create({ 
-	    	description: description,
-	    	result: result,
-	    	owner: user.id,
-	    	def: definition
-	    })
-	    .then(
-	    	function createSuccess(log) {
-	    		res.json(log);
-	    	}, 
-		    function createError(err) {
-		        res.send(500, err.message);
-		    }
-	    );
+   	Log 
+	.create({ 
+		description: description,
+		result: result,
+		owner: userid,
+		definition: definition
+	})
+	.then(
+		function createSuccess(log) {
+			res.json(log);
+		}, 
+		function createError(err) {
+			res.send(500, err.message);
+		}
+	);
 });
 
 router.get('/', function(req, res) {
@@ -78,7 +76,7 @@ router.put('/', function(req, res) {
     	{
     		description: description,
 	    	result: result,
-	    	def: definition
+	    	definition: definition
     	},
 
     	{where: {id: data}}
