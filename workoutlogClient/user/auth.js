@@ -1,17 +1,26 @@
 $(function(){
-    // $(function() {
+      console.log("Made it to authjs");
        $.extend(WorkoutLog, {
           signup: function() {
                 var username = $("#su_username").val();
                 var password = $("#su_password").val();
+
+                  console.log("username: ", username)
+                  console.log("password: ", password)
+
                 var user = {user:  {username: username, password: password }};
+                  console.log(user)
+
                 var signup = $.ajax({
                    type: "POST", 
                    url: WorkoutLog.API_BASE + "user", 
                    data: JSON.stringify(user), 
                    contentType: "application/json"
                 });
+
+                console.log(signup);
                 signup.done(function(data) {
+                      console.log("data :", data)
                    if (data.sessionToken) {
                       WorkoutLog.setAuthHeader(data.sessionToken);
                       WorkoutLog.definition.fetchAll();

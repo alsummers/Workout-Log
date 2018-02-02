@@ -53,6 +53,7 @@ $(function() {
 	      			$("#log-description").val("");
 					$("#log-result").val("");
 					$('a[href="#history"]').tab("show");
+					$('a[href="#water"]').tab("show");
 		      	});
 			},
 
