@@ -7,6 +7,11 @@ var jwt = require('jsonwebtoken');
 router.post('/', function(req, res) {
 		var username = req.body.user.username;
 		var pass = req.body.user.password;
+		console.log("this is a request", req.body)
+	
+		console.log("username :", username);
+		console.log("password :", pass);
+
 		//Need to create a user object and use sequelize to put that user into
 		//
 

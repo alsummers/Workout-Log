@@ -7,7 +7,9 @@ router.post('/', function(req, res) {
 	//variables
 	    var description = req.body.definition.desc;
         var logType= req.body.definition.type;
-        var owner = req.user.id;
+		var owner = req.user.id;
+		
+		console.log("************************	OWNER *************************", owner);
 
 	//methods
 	Definition

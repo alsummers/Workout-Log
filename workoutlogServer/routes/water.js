@@ -4,9 +4,10 @@ var User = sequelize.import('../models/user.js')
 var Water = sequelize.import('../models/water.js')
 
 router.post('/', function(req, res){
-    var user = req.body.user
-    var userid = req.user.id
+    var owner = req.user.id
     var water = req.body.user.amount
+
+    console.log()
 
     Water.create({
         amount: amount,
@@ -23,7 +24,7 @@ router.post('/', function(req, res){
 });
 
 router.get('/', function(req, res) {
-    var userid = req.body.user.id
+    var userid = req.body.user.id;
 
     Water.findAll({
         where: {owner: userid}

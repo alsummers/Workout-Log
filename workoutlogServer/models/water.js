@@ -6,3 +6,13 @@ module.exports = function (sequelize, DataTypes) {
 
     });
 };
+
+ /*
+    POSTMAN TEST:
+    {
+        "water:{
+            "amount":"Running my heart out as fast I could for 70 miles.",
+            
+        }
+    }
+    */

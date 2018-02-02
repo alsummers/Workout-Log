@@ -9,7 +9,7 @@ router.post('/', function(req, res) {
     var description = req.body.log.description; 
     var result = req.body.log.result; 
 	var user = req.body.user;
-	var userid = req.body.user.id;
+	var userid = req.user.id;
     var definition = req.body.log.def;
    	Log 
 	.create({ 
