@@ -17,7 +17,7 @@ $(function() {
 	         	contentType: "application/json"
 		      	});
 
-		      	define.done(function(data) {
+		      	waterIntake.done(function(data) {
 	      			WorkoutLog.water.userIntake.push(data.water);
 		      		$("#fluid-intake").val("");
 
