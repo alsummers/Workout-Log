@@ -17,6 +17,5 @@ sequelize.authenticate().then(
 var User = sequelize.import('./models/user');
 var Log = sequelize.import('./models/log');
 var Definition = sequelize.import('./models/definition');
-var Water = sequelize.import('./models/water.js'); //added for challenge;
-
+var Water = sequelize.import('./models/water'); //added for challenge;
 module.exports = sequelize;

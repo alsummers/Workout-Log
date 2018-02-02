@@ -8,15 +8,15 @@ router.post('/', function(req, res) {
     // req has some body properties that have a username and pwd
     var description = req.body.log.description; 
     var result = req.body.log.result; 
-	var user = req.body.user;
 	var userid = req.user.id;
-    var definition = req.body.log.def;
+	var definition = req.body.log.definition;
+	console.log("**REQBODY:**", req.body.log)
    	Log 
 	.create({ 
 		description: description,
 		result: result,
 		owner: userid,
-		definition: definition
+		def: definition
 	})
 	.then(
 		function createSuccess(log) {
@@ -29,7 +29,9 @@ router.post('/', function(req, res) {
 });
 
 router.get('/', function(req, res) {
+	// console.log('Req*** :', req)
 	var userid = req.user.id;
+	console.log('***USERID**', userid);
 	Log
 	.findAll({
 		where: { owner: userid }
