@@ -5,7 +5,7 @@ var Water = sequelize.import('../models/water.js')
 
 router.post('/', function(req, res){
     var user = req.body.user
-    var userid = req.body.user.id
+    var userid = req.user.id
     var water = req.body.user.amount
 
     Water.create({
