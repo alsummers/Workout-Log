@@ -19,7 +19,8 @@ $(function() {
 
 		      	waterIntake.done(function(data) {
 	      			WorkoutLog.water.userIntake.push(data.water);
-		      		$("#fluid-intake").val("");
+					$("#fluid-intake").val("");
+					$('a[href="#history"]').tab("show");
 
 		      	});
 		  },

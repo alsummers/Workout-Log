@@ -46,6 +46,7 @@ $(function(){
           if (target === "#history") {
              WorkoutLog.log.setHistory();
           }
+
        });
     
        // bind enter key

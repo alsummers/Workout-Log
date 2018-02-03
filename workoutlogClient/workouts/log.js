@@ -34,6 +34,7 @@ $(function() {
 				$("#history-list").children().remove();
 				$("#history-list").append(lis);
 			},
+		
 			create: function() {
 				var itsLog = { 
 		        	description: $("#log-description").val(),
@@ -53,7 +54,6 @@ $(function() {
 	      			$("#log-description").val("");
 					$("#log-result").val("");
 					$('a[href="#history"]').tab("show");
-					$('a[href="#water"]').tab("show");
 		      	});
 			},
 
