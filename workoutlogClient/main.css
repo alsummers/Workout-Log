@@ -1,7 +1,10 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    color: gold;
+    background: darkgrey;
     height: 100%;
     width: auto;
     position: relative;
+}
+#home {
+    text-align: center;
 }

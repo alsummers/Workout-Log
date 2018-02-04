@@ -33,14 +33,13 @@
     <li><a href="#log" class="disabled" data-toggle="tab">Log</a></li>
     <li><a href="#history" class="disabled" data-toggle="tab">View History</a></li>
     <a href="#update-log" data-toggle="tab" class="disabled" type="hidden"></a>
+    <li><a href="#chart" data-toggle="tab" class="disabled">Progress</a></li>
   </ul>
 </nav>
-  <div class="container" id="home">
-    <div class = "row justify-content-center">
-    <div class = "col">
+
     <div class="tab-content justify-content-center">
-      <div class="tab-pane active">
-        <h2>Workout Log</h2>
+      <div class="tab-pane active" id="home">
+        <div class="row justify-content-center"><h2>Workout Log</h2></div>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#forLogin">
           Start Here
         </button>
@@ -55,7 +54,6 @@
               </div>
             </div>
           </div>
-          </div>
         </div>
         </div>
         <!-- original content data -->
@@ -67,7 +65,8 @@
         <div id="forLogout" style="display:none;">
           <button class="btn btn-primary">Logout</button>
         </div>
-      </div> 
+      </div>
+    </div> 
       <!-- DEFINE -->
       <div class="tab-pane fade" id="define">
         <h2>Define</h2>
@@ -81,7 +80,6 @@
           </select>
           <button id="def-save" class="btn btn-primary">Save</button>
       </div>
-
     
       <div class="tab-pane fade" id="log">
         <h2>log!</h2>
@@ -128,6 +126,12 @@
         </ul>
       </div>
     </div>
+
+    <div class="tab-pane fade" id="chart">
+      <h2>Current Progress</h2>
+      <div></div>
+    </div>
+
 
 
 
