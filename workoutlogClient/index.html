@@ -10,6 +10,8 @@
 
   <!-- Bootstrap -->
   <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="/main.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,7 +23,8 @@
 
 <body>
 
-
+    <nav class="navbar justify-content-between">
+    <a class="navbar-brand">FeeltheBurn</a>
   <ul class="nav nav-tabs">
     <li><a href="#home" id="loginout" class="disabled" data-toggle="tab">Login</a>
       <!--logout too -->
@@ -30,23 +33,41 @@
     <li><a href="#log" class="disabled" data-toggle="tab">Log</a></li>
     <li><a href="#history" class="disabled" data-toggle="tab">View History</a></li>
     <a href="#update-log" data-toggle="tab" class="disabled" type="hidden"></a>
-    <li><a href="#water" class="disabled" data-toggle="tab">Fluid Intake</a></li> <!--added for challenge-->
-
   </ul>
-
-  <div class="container">
-    <div class="tab-content">
-      <div class="tab-pane active" id="home">
+</nav>
+  <div class="container" id="home">
+    <div class = "row justify-content-center">
+    <div class = "col">
+    <div class="tab-content justify-content-center">
+      <div class="tab-pane active">
         <h2>Workout Log</h2>
-        <div id="forLogin">
-          <!-- have the class build the modals for these http://getbootstrap.com/javascript/#modals -->
-          <button data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button>
-          <button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#forLogin">
+          Start Here
+        </button>
+        <div class="modal" id="forLogin" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Begin your journey.</h5>
+              <div class="modal-body">
+                <button data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button>
+                <button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button>
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
+        </div>
+        <!-- original content data -->
+        <!-- <div id="forLogin" data-> -->
+          <!-- have the class build the modals for these http://getbootstrap.com/javascript/#modals -->
+          <!-- <button data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button>
+          <button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button>
+        </div>-->
         <div id="forLogout" style="display:none;">
           <button class="btn btn-primary">Logout</button>
         </div>
-      </div>
+      </div> 
       <!-- DEFINE -->
       <div class="tab-pane fade" id="define">
         <h2>Define</h2>
@@ -72,6 +93,10 @@
         <label>notes</label>
         <textarea class="form-control" id="log-description" rows="3"></textarea>
         <button id="log-save" class="btn btn-primary">Save</button>
+          <h2>Fluid Intake</h2>
+            <label for="fluid-intake">How many oz. of water?</label>
+            <input type = "number" max = "150" class="form-control" id="fluid-intake" rows="1" ></textarea>
+            <button id="fluid-save" class="btn btn-primary">Save</button>
       </div>
 
       <!--UPDATING A WORKOUT SECTION-->
@@ -90,12 +115,12 @@
       </div>
 
         <!-- Water intake panel -added for challenge -->
-  <div class="tab-pane fade" id="water">
+  <!-- <div class="tab-pane fade" id="water">
     <h2>Fluid Intake</h2>
       <label for="fluid-intake">How many oz. of water?</label>
-      <textarea class="form-control" id="fluid-intake" rows="2" ></textarea>
+      <input type = "number" max = "150" class="form-control" id="fluid-intake" rows="1" ></textarea>
       <button id="fluid-save" class="btn btn-primary">Save</button>
-  </div>
+  </div> -->
   
       <div class="tab-pane fade" id="history">
         <h2>History</h2>
@@ -108,7 +133,7 @@
 
   <!-- Login Modals -->
 
- <div class="modal fade" id="login-modal" role="dialog">
+ <div class="modal fade" id="login-modal" role="dialog" data-toggle="modal" >
    <div class="modal-dialog">
      <div class="modal-content">
        <div class="modal-header">

@@ -27,10 +27,12 @@ $(function(){
                       WorkoutLog.log.fetchAll();
                    }
                    $("#signup-modal").modal("hide");
+                   $("#forLogin").modal("hide");
                    $(".disabled").removeClass("disabled");
                    $("#loginout").text("Logout");
                    // go to define tab
                    $('.nav-tabs a[href="#define"]').tab('show');
+                   
     
                    $("#su_username").val("");
                    $("#su_password").val("");
@@ -61,6 +63,7 @@ $(function(){
     
     
                 $("#login-modal").modal("hide");
+                $("#forLogin").modal("hide");
                 $(".disabled").removeClass("disabled");
                 $("#loginout").text("Logout");
                 $("#li_username").val("");
