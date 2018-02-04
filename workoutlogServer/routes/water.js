@@ -24,7 +24,7 @@ router.post('/', function(req, res){
 });
 
 router.get('/', function(req, res) {
-    var userid = req.body.user.id;
+    var userid = req.user.id;
 
     Water.findAll({
         where: {owner: userid}
