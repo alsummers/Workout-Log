@@ -39,11 +39,26 @@ $(function() {
 					for(i = 0; i < data.length; i++) {
 					var waterBar = waterArray.push(data[i].amount)
 					}
+
+					let dateArray = []
+					for(let result of WorkoutLog.water.userIntake) {
+						let date = result.createdAt.slice(0,19);
+						console.log(date)
+						let dateOrder = result.createdAt.replace(/\D/g, '')
+						dateArray.push({
+							date,
+							dateOrder
+						})
+					}
+					dateArray.sort(function(a, b) {
+	    				return parseFloat(a.dateOrder) - parseFloat(b.dateOrder);
+					});
+					let newdateArray = dateArray.map(function(a) {return a.date;})
 					var ctx = $("#progressChart");
 					var newChart = new Chart(ctx, {
 						type: 'bar',
 						data: {
-							labels: ["oz."],
+							labels: newdateArray,
 							datasets: [{
 								label: "Fluid Intake",
 								data: waterArray,
