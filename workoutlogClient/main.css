@@ -28,9 +28,13 @@ body {
     border: 4px gold double;
     border-radius: 5px;
 }
+#brand{
+    margin-right: 2rem;
+}
 .btn {
     background-color: gold;
     color: black;
+    margin-top: 1rem;
 }
 .btn:hover {
     background-color: white;
