@@ -42,3 +42,6 @@ body {
     border: gold double 4px;
     color: white;
 }
+.modal-content input{
+    color: black;
+}
