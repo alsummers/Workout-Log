@@ -53,7 +53,7 @@ $(function() {
 	      			WorkoutLog.log.workouts.push(data);
 	      			$("#log-description").val("");
 					$("#log-result").val("");
-					$('a[href="#fluid-intake"]').tab("show");
+					// $('a[href="#fluid-intake"]').tab("show");
 		      	});
 			},
 
@@ -158,7 +158,7 @@ $(function() {
 		}
 	});
 
-	$("#log-save").on("click", WorkoutLog.log.create);
+	$("#fluid-save").on("click", WorkoutLog.log.create);
 	$("#history-list").delegate('.remove', 'click', WorkoutLog.log.delete);
 	$("#log-update").on("click", WorkoutLog.log.updateWorkout);
 	$("#history-list").delegate('.update', 'click', WorkoutLog.log.getWorkout);
