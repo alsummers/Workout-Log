@@ -17,16 +17,16 @@ body {
 #home{
     text-align: center;
 }
-.loginBar {
+#loginBar {
     text-align: center;
     margin-top: 1rem;
-    width: 300px;
-    height: auto;
     background-color: black;
     color: gold;
     border-radius: 4px;
+    left: 35%;
     padding: 2rem;
     border: 4px gold double;
+    border-radius: 5px;
 }
 .btn {
     background-color: gold;
