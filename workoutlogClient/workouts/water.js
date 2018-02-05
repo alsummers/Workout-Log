@@ -49,7 +49,7 @@ $(function() {
 					  labels: ["oz."],
 					  datasets: [{
 						  label: "Fluid Intake",
-						  data: [12],
+						  data: [WorkoutLog.water.userIntake],
 						  backgroundColor: [
 							  'rgba(0, 191, 255, 0.2'
 						  ],
@@ -78,10 +78,11 @@ $(function() {
 		$("#fluid-save").on("click", WorkoutLog.water.create);
 		WorkoutLog.water.getChart();
 
+		
 
    // fetch definitions if we already are authenticated and refreshed
     if (window.localStorage.getItem("sessionToken")) {
       WorkoutLog.water.fetchAll();
    }
-   
+   console.log("UserIntake:", WorkoutLog.water.userIntake)
 });

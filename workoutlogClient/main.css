@@ -4,13 +4,41 @@ body {
 }
 .nav {
     background: black;
-    color: white;
+    color: gold;
 }
 
 .nav a {
-    color: white;
+    color:gold;
 }
 .nav a:hover {
     color: black;
     border: 2px solid gold;
+}
+#home{
+    text-align: center;
+}
+.loginBar {
+    text-align: center;
+    margin-top: 1rem;
+    width: 300px;
+    height: auto;
+    background-color: black;
+    color: gold;
+    border-radius: 4px;
+    padding: 2rem;
+    border: 4px gold double;
+}
+.btn {
+    background-color: gold;
+    color: black;
+}
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.modal-content {
+    background-color: black;
+    border: gold double 4px;
+    color: white;
 }
