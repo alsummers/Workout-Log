@@ -10,6 +10,7 @@
 
   <!-- Bootstrap -->
   <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/bower_components/animate.css/animate.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link href="./main.css" rel="stylesheet">
 
@@ -40,9 +41,9 @@
   <div class="container">
     <div class = "row justify-content-center">
     <div class="tab-content justify-content-center">
-      <div class="tab-pane active" id="home">
-        <div class= "col col-lg-3" id="loginBar">
-        <h1>Begin the Bern</h1>
+      <div class="tab-pane active wow fadeIn" id="home">
+        <div class= "col col-lg-6" id="loginBar">
+        <h1>Begin the Burn</h1>
         <div id="forLogin">
           <!-- have the class build the modals for these http://getbootstrap.com/javascript/#modals -->
           <button data-toggle="modal" data-target="#login-modal" class="btn">Login</button>
@@ -110,7 +111,7 @@
         <h2>History</h2>
         <ul class="list-group" id="history-list">
         </ul>
-        <canvas id="progressChart" width="400" height="400" style="border: 2px solid black"></canvas>
+        <canvas id="progressChart" width="200" height="200" style="border: 2px solid black"></canvas><canvas id="logChart" width="200" height="200" style="border: 2px solid black"></canvas>
       </div>
     </div>
   </div>
@@ -168,6 +169,10 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./bower_components/chart.js/dist/Chart.min.js"></script>
+    <script src="./bower_components/wow/dist/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
     <script src="./app.js"></script>
     <script src="./user/auth.js"></script> 
     <script src="./workouts/define.js"></script>

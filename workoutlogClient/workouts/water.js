@@ -60,14 +60,12 @@ $(function() {
 						data: {
 							labels: newdateArray,
 							datasets: [{
-								label: "Fluid Intake",
+								label: "Daily Fluid Intake",
 								data: waterArray,
-								backgroundColor: [
-									'rgba(0, 191, 255, 0.2'
-								],
-								borderColor: [
-									'rgba(0, 191, 255, 1)'
-								],
+								backgroundColor:
+									'rgba(0, 191, 255, 0.2',
+								borderColor:
+									'rgba(0, 191, 255, 1)',
 								borderWidth: 2
 							}]
 						},
