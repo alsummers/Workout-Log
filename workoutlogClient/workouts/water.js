@@ -39,12 +39,44 @@ $(function() {
 		      .fail(function(err) {
 		         console.log(err);
 		      });
+		  },
+
+		  getChart: function() {
+			  var ctx = $("#progressChart");
+			  var newChart = new Chart(ctx, {
+				  type: 'bar',
+				  data: {
+					  labels: ["oz."],
+					  datasets: [{
+						  label: "Fluid Intake",
+						  data: [12],
+						  backgroundColor: [
+							  'rgba(0, 191, 255, 0.2'
+						  ],
+						  borderColor: [
+							  'rgba(0, 191, 255, 1)'
+						  ],
+						  borderWidth: 2
+					  }]
+				  },
+				  options: {
+					  scales: {
+						  yAxes: [{
+							  ticks: {
+								beginAtZero: true
+							  }
+						  }]
+					  }
+				  }
+			  })
 		  }
 		}
+		
 	});
 
 	// bindings
 		$("#fluid-save").on("click", WorkoutLog.water.create);
+		WorkoutLog.water.getChart();
 
 
    // fetch definitions if we already are authenticated and refreshed

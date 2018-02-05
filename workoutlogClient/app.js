@@ -38,6 +38,10 @@ $(function(){
           if (target === "#log") {
              WorkoutLog.log.setDefinitions();
           }
+
+          if (target === "#water") {
+            WorkoutLog.water.create();
+          }
     
           if (target === "#update-log") {
             WorkoutLog.log.setDefinitions();
