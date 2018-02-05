@@ -35,6 +35,37 @@ $(function() {
 				})
 				.done(function(data) {
 					WorkoutLog.water.userIntake = data;
+					let waterArray = []
+					for(i = 0; i < data.length; i++) {
+					var waterBar = waterArray.push(data[i].amount)
+					}
+					var ctx = $("#progressChart");
+					var newChart = new Chart(ctx, {
+						type: 'bar',
+						data: {
+							labels: ["oz."],
+							datasets: [{
+								label: "Fluid Intake",
+								data: waterArray,
+								backgroundColor: [
+									'rgba(0, 191, 255, 0.2'
+								],
+								borderColor: [
+									'rgba(0, 191, 255, 1)'
+								],
+								borderWidth: 2
+							}]
+						},
+						options: {
+							scales: {
+								yAxes: [{
+									ticks: {
+										beginAtZero: true
+									}
+								}]
+							}
+						}
+					})
 				})
 				.fail(function(err) {
 					console.log(err);
@@ -42,33 +73,7 @@ $(function() {
 			},
 
 			getChart: function() {
-				var ctx = $("#progressChart");
-				var newChart = new Chart(ctx, {
-					type: 'bar',
-					data: {
-						labels: ["oz."],
-						datasets: [{
-							label: "Fluid Intake",
-							data: [WorkoutLog.water.userIntake],
-							backgroundColor: [
-								'rgba(0, 191, 255, 0.2'
-							],
-							borderColor: [
-								'rgba(0, 191, 255, 1)'
-							],
-							borderWidth: 2
-						}]
-					},
-					options: {
-						scales: {
-							yAxes: [{
-								ticks: {
-									beginAtZero: true
-								}
-							}]
-						}
-					}
-				})
+				
 		  }
 		}
 		
@@ -84,5 +89,5 @@ $(function() {
     if (window.localStorage.getItem("sessionToken")) {
       WorkoutLog.water.fetchAll();
    }
-   console.log("UserIntake:", WorkoutLog.water.userIntake)
+   
 });
