@@ -17,9 +17,16 @@ body {
 #home{
     text-align: center;
 }
+.jumbotron {
+    background-color: transparent;
+}
+.jumbotron h1 {
+    color: gold;
+    border-bottom: 2px solid gold;
+    padding-bottom: 1rem;
+}
 #loginBar {
     text-align: center;
-    margin-top: 25%;
     background-color: black;
     color: gold;
     border-radius: 4px;
@@ -65,4 +72,30 @@ body {
     color: gold;
     border-radius: 4px;
     margin-top: 10%;
+}
+#update-log {
+    background-color: black;
+    padding: 2rem;
+    border: 4px double gold;
+    color: gold;
+    border-radius: 4px;
+    margin-top: 10%;
+}
+#history {
+    background-color: black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 4px double gold;
+    color: black;
+    border-radius: 4px;
+    margin-top: 10%;
+
+}
+#history h2 {
+    color: gold;
+}
+canvas {
+    padding-top: 2rem;
 }

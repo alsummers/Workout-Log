@@ -41,7 +41,10 @@
   <div class="container">
     <div class = "row justify-content-center">
     <div class="tab-content justify-content-center">
-      <div class="tab-pane active wow fadeInDown" data-wow-duration="2s" id="home">
+      <div class="tab-pane active" id="home">
+        <div class="jumbotron"><h1>Feel the Burn</h1>
+        <p>Your personal online fitness log</p></div>
+        <div class="wow fadeInDown" data-wow-duration="2s">
         <div class= "col col-lg-6" id="loginBar">
         <h1>Begin the Burn</h1>
         <div id="forLogin">
@@ -50,6 +53,7 @@
           <button data-toggle="modal" data-target="#signup-modal" class="btn">Sign Up</button>
         </div>
       </div>
+    </div>
         <div id="forLogout" style="display:none;">
           <button class="btn">Logout</button>
         </div>
@@ -111,7 +115,7 @@
         <h2>History</h2>
         <ul class="list-group" id="history-list">
         </ul>
-        <canvas id="progressChart" width="200" height="200" style="border: 2px solid black"></canvas>
+        <div style="position:absolute; left: 35%; width:500px; height:500px;"><canvas id="progressChart" width="200" height="200"></canvas></div>
       </div>
     </div>
   </div>
