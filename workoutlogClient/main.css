@@ -19,7 +19,7 @@ body {
 }
 #loginBar {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 25%;
     background-color: black;
     color: gold;
     border-radius: 4px;
@@ -48,4 +48,21 @@ body {
 }
 .modal-content input{
     color: black;
+}
+
+#define{
+    background-color: black;
+    padding: 2rem;
+    border: 4px double gold;
+    color: gold;
+    border-radius: 4px;
+    margin-top: 10%;
+}
+#log{
+    background-color: black;
+    padding: 2rem;
+    border: 4px double gold;
+    color: gold;
+    border-radius: 4px;
+    margin-top: 10%;
 }

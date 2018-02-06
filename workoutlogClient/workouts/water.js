@@ -21,6 +21,7 @@ $(function() {
 						WorkoutLog.water.userIntake.push(data.water);
 						$("#fluid-intake").val("");
 						$('a[href="#history"]').tab("show");
+						WorkoutLog.water.fetchAll();
 
 					});
 			},
@@ -94,7 +95,7 @@ $(function() {
 
 	// bindings
 		$("#fluid-save").on("click", WorkoutLog.water.create);
-		WorkoutLog.water.getChart();
+
 
 		
 

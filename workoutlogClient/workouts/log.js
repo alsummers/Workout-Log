@@ -149,7 +149,7 @@ $(function() {
 			         }
 			      })
 			      .done(function(data) {
-			         WorkoutLog.log.workouts = data;
+					WorkoutLog.log.workouts = data;
 			      })
 			      .fail(function(err) {
 			         console.log(err);

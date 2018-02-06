@@ -19,12 +19,14 @@ $(function(){
                 });
 
                 console.log(signup);
+                
                 signup.done(function(data) {
                       console.log("data :", data)
                    if (data.sessionToken) {
                       WorkoutLog.setAuthHeader(data.sessionToken);
                       WorkoutLog.definition.fetchAll();
                       WorkoutLog.log.fetchAll();
+                      
                    }
                    $("#signup-modal").modal("hide");
                    $(".disabled").removeClass("disabled");
@@ -85,7 +87,11 @@ $(function(){
     
        // bind events
        $("#login").on("click", WorkoutLog.login);
-       $("#signupForm").submit(WorkoutLog.signup);
+       $("#signup").on( "click", function (e) {
+             console.log(WorkoutLog)
+             WorkoutLog.signup();
+             e.preventDefault();
+            });
        $("#loginout").on("click", WorkoutLog.loginout);
     
        if (window.localStorage.getItem("sessionToken")) {
