@@ -41,7 +41,7 @@
   <div class="container">
     <div class = "row justify-content-center">
     <div class="tab-content justify-content-center">
-      <div class="tab-pane active wow fadeIn" id="home">
+      <div class="tab-pane active wow fadeInDown" id="home">
         <div class= "col col-lg-6" id="loginBar">
         <h1>Begin the Burn</h1>
         <div id="forLogin">
@@ -142,6 +142,7 @@
      </div>
    </div>
  </div>
+ <form id="signupForm">
  <div class="modal fade" id="signup-modal" role="dialog">
    <div class="modal-dialog">
      <div class="modal-content">
@@ -152,18 +153,18 @@
       <div class="modal-body">
       <div class="alert alert-danger" role="alert" style="display:none;" id="su_error"></div>
         <label for="su_username">Username:</label>
-        <input id="su_username" />
+        <input id="su_username" type="email" placeholder="johndoe@email.com" />
         <label for="su_password">Password:</label>
-        <input type="password" id="su_password" />
+        <input type="password" required minlength="5" id="su_password" />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <button id="signup" type="button" class="btn">Signup</button>
+        <button id="signup" type="submit" class="btn">Signup</button>
       </div>
      </div>
    </div>
  </div>
-
+</form>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
