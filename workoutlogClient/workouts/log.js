@@ -54,6 +54,7 @@ $(function() {
 	      			$("#log-description").val("");
 					$("#log-result").val("");
 					// $('a[href="#fluid-intake"]').tab("show");
+			
 		      	});
 			},
 

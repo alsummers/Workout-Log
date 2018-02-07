@@ -43,7 +43,7 @@ $(function() {
 
 					let dateArray = []
 					for(let result of WorkoutLog.water.userIntake) {
-						let date = result.createdAt.slice(0,19);
+						let date = result.createdAt.slice(0,10);
 						console.log(date)
 						let dateOrder = result.createdAt.replace(/\D/g, '')
 						dateArray.push({
@@ -64,7 +64,7 @@ $(function() {
 								label: "Daily Fluid Intake",
 								data: waterArray,
 								backgroundColor:
-									'rgba(0, 191, 255, 0.2',
+									'rgba(0, 191, 255, 0.5',
 								borderColor:
 									'rgba(0, 191, 255, 1)',
 								borderWidth: 2
